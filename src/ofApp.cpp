@@ -5,22 +5,10 @@
 void ofApp::setup(){
     ofSetFrameRate(60);
     ofBackground(0);
-    
-//    ofJson json = ofLoadJson("settings/laserprojectors.json");
-//    for( auto & j : json){
-//        laserProjectors[j["identifier"]].setupFromJson(j);
-//    }
-//
-//    laserProjectors["frontStage"].setup("backStage", 0, ofGetWidth()-ofGetHeight(), 0, ofGetHeight(), ofGetHeight());
-//
-    laserProjectors["backStage"].load("settings/lp_1.json");
-    laserProjectors["frontStage"].load("settings/lp_2.json");
 
-//    laserProjectors["backStage"].setup("frontStage", 1, ofGetWidth()-ofGetHeight()*2 - 10, 0, ofGetHeight(), ofGetHeight());
-
+    laserProjectors["mainLaser"].load("settings/lp_1.json");
 
     oscReceiver.setup(OSC_RECEIVE_PORT);
-    
     
     // GUI
     showGui = true;
@@ -30,11 +18,12 @@ void ofApp::setup(){
         gui.add(lp.second.parameters);
     }
 
-//    // Syphon IN
+    
+//  Syphon IN
     syphonIn.setup();
     syphonIn.find("toLaser_displacement", "MadMapper");
 
-    syphonOut.setup("laser", laserProjectors["frontStage"].previewW, laserProjectors["frontStage"].previewH);
+    syphonOut.setup("laser", laserProjectors["mainLaser"].previewW, laserProjectors["mainLaser"].previewH);
 
 }
 
@@ -70,8 +59,7 @@ void ofApp::draw() {
     }
 
 //    ofSetColor(255);
-//    ofDrawBitmapString(laserProjectors["frontStage"].ildaFrame.getString(), 10, 30);
-    ofSetWindowTitle("Laser tools - fps " + ofToString(ofGetFrameRate(), 0) + " | receive OSC port " + ofToString(OSC_RECEIVE_PORT) +  " | fs: " + laserProjectors["frontStage"].syphonIn.getName() +  " | bs: " + laserProjectors["backStage"].syphonIn.getName());
+    ofSetWindowTitle("Laser tools - fps " + ofToString(ofGetFrameRate(), 0) + " | receive OSC port " + ofToString(OSC_RECEIVE_PORT) +  " | mL: " + laserProjectors["mainLaser"].syphonIn.getName());
     
     
     if(showGui) gui.draw();
@@ -81,11 +69,10 @@ void ofApp::draw() {
         ofClear(0);
         ofSetColor(255);
         ofPushMatrix();
-//        ofTranslate(laserProjectors["frontStage"].previewX, laserProjectors["frontStage"].previewY);
-        ofScale(laserProjectors["frontStage"].previewW, laserProjectors["frontStage"].previewH);
+        ofScale(laserProjectors["mainLaser"].previewW, laserProjectors["mainLaser"].previewH);
         
-        laserProjectors["frontStage"].ildaFrame.drawLines();
-        laserProjectors["frontStage"].ildaFrame.drawFinalPoints();
+        laserProjectors["mainLaser"].ildaFrame.drawLines();
+        laserProjectors["mainLaser"].ildaFrame.drawFinalPoints();
         
         ofPopMatrix();
     }
@@ -110,13 +97,11 @@ void ofApp::keyPressed(int key){
 
         case 's':
 //            gui.saveToFile("settings/general.json");
-            laserProjectors["frontStage"].save("settings/lp_1.json");
-            laserProjectors["backStage"].save("settings/lp_2.json");
+            laserProjectors["mainLaser"].save("settings/lp_1.json");
             break;
         case 'l':
 //            gui.loadFromFile("settings/general.json");
-            laserProjectors["frontStage"].load("settings/lp_1.json");
-            laserProjectors["backStage"].load("settings/lp_2.json");
+            laserProjectors["mainLaser"].load("settings/lp_1.json");
             break;
 
     }
@@ -134,8 +119,7 @@ void ofApp::mousePressed(int x, int y, int button){
 
 //--------------------------------------------------------------
 void ofApp::windowResized(int w, int h){
-    laserProjectors["frontStage"].setPreview(w-h*2 - 10, 0, h, h);
-    laserProjectors["backStage"].setPreview(w-h, 0, h, h);
+    laserProjectors["mainLaser"].setPreview(w-h*2 - 10, 0, h, h);
 }
 
 

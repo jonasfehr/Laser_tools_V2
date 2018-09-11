@@ -54,4 +54,37 @@
 			<Scale>0, 0</Scale>
 		</IldaFrame_Params>
 	</LaserProjector_1>
+	<group>
+		<isActivated>0</isActivated>
+		<showTestPattern>0</showTestPattern>
+		<LASER_PPSx1000>30</LASER_PPSx1000>
+		<IldaFrame_Params>
+			<PolyProcessor>
+				<smoothAmount>0</smoothAmount>
+				<optimizeTolerance>0</optimizeTolerance>
+				<targetPointCount>500</targetPointCount>
+				<spacing>0</spacing>
+			</PolyProcessor>
+			<Draw_Lines>0</Draw_Lines>
+			<Draw_Points>0</Draw_Points>
+			<Draw_Point_nums>0</Draw_Point_nums>
+			<Draw_finalPoints>1</Draw_finalPoints>
+			<masterColor>1, 1, 1, 1</masterColor>
+			<start_Blanks>10</start_Blanks>
+			<start_Count>10</start_Count>
+			<end_Count>10</end_Count>
+			<end_Blanks>10</end_Blanks>
+			<Do_Cap_X>0</Do_Cap_X>
+			<Do_Cap_Y>0</Do_Cap_Y>
+			<useColorMap>0</useColorMap>
+			<doDisplace>0</doDisplace>
+			<displaceAmount>0</displaceAmount>
+			<doFade>0</doFade>
+			<fadeLength>0</fadeLength>
+			<Do_Flip_X>0</Do_Flip_X>
+			<Do_Flip_Y>0</Do_Flip_Y>
+			<Offset>0, 0</Offset>
+			<Scale>0, 0</Scale>
+		</IldaFrame_Params>
+	</group>
 </group>

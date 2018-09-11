@@ -1,5 +1,5 @@
 {
-    "frontStage": {
+    "mainLaser": {
         "BezierHandler": {
             "bc_00": {
                 "centerBP": {
@@ -157,23 +157,9 @@
         },
         "DAC": {
             "ConnectionID": 0,
-            "DeviceID": "RayComposer NET 2131"
+            "DeviceID": ""
         },
         "HotSpotHandler": {
-            "": {
-                "color": {
-                    "a": 1.0,
-                    "b": 1.0,
-                    "g": 1.0,
-                    "r": 1.0
-                },
-                "identifier": "",
-                "position": {
-                    "x": 0.0,
-                    "y": 0.0,
-                    "z": 0.0
-                }
-            },
             "hsSP_00": {
                 "color": {
                     "a": 1.0,
@@ -1138,11 +1124,10 @@
                 }
             }
         },
-        "identifier": "frontStage",
+        "identifier": "mainLaser",
         "parameters": {
-            "RayComposer_NET_2168": {
+            "group": {
                 "IldaFrame_Params": {
-                    "Color": "1, 1, 1, 1",
                     "Do_Cap_X": "0",
                     "Do_Cap_Y": "0",
                     "Do_Flip_X": "0",
@@ -1156,20 +1141,23 @@
                         "optimizeTolerance": "0",
                         "smoothAmount": "0",
                         "spacing": "0",
-                        "targetPointCount": "0"
+                        "targetPointCount": "500"
                     },
                     "Scale": "0, 0",
-                    "displaceAmount": "0.032",
+                    "displaceAmount": "0",
                     "doDisplace": "0",
-                    "end_Blanks": "0",
+                    "doFade": "0",
+                    "end_Blanks": "10",
                     "end_Count": "10",
-                    "start_Blanks": "15",
+                    "fadeLength": "0",
+                    "masterColor": "1, 1, 1, 1",
+                    "start_Blanks": "10",
                     "start_Count": "10",
                     "useColorMap": "0"
                 },
-                "LASER_PPSx1000": "18",
-                "identifier:": "frontStage",
-                "isActivated": "1",
+                "LASER_PPSx1000": "30",
+                "identifier:": "mainLaser",
+                "isActivated": "0",
                 "showTestPattern": "0"
             }
         },
