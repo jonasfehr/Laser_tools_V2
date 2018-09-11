@@ -1,0 +1,7 @@
+ofxGui
+ofxIlda
+ofxOpenCv
+ofxOsc
+ofxRayComposer
+ofxSyphon
+ofxSyphonUtils

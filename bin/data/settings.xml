@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<group>
+	<LaserProjector_0>
+		<isActivated>0</isActivated>
+		<showTestPattern>0</showTestPattern>
+		<LASER_PPSx1000>30</LASER_PPSx1000>
+		<IldaFrame_Params>
+			<PolyProcessor>
+				<smoothAmount>0</smoothAmount>
+				<optimizeTolerance>0</optimizeTolerance>
+				<targetPointCount>426</targetPointCount>
+				<spacing>0.00656873</spacing>
+			</PolyProcessor>
+			<Draw_Lines>1</Draw_Lines>
+			<Draw_Points>1</Draw_Points>
+			<Draw_Point_nums>0</Draw_Point_nums>
+			<Draw_finalPoints>0</Draw_finalPoints>
+			<Color>1, 1, 1, 1</Color>
+			<Blank_Count>30</Blank_Count>
+			<End_Count>30</End_Count>
+			<Do_Cap_X>0</Do_Cap_X>
+			<Do_Cap_Y>0</Do_Cap_Y>
+			<useColorMap>0</useColorMap>
+			<Do_Flip_X>0</Do_Flip_X>
+			<Do_Flip_Y>0</Do_Flip_Y>
+			<Offset>0, 0</Offset>
+			<Scale>0, 0</Scale>
+		</IldaFrame_Params>
+	</LaserProjector_0>
+	<LaserProjector_1>
+		<isActivated>0</isActivated>
+		<showTestPattern>0</showTestPattern>
+		<LASER_PPSx1000>30</LASER_PPSx1000>
+		<IldaFrame_Params>
+			<PolyProcessor>
+				<smoothAmount>0</smoothAmount>
+				<optimizeTolerance>0</optimizeTolerance>
+				<targetPointCount>500</targetPointCount>
+				<spacing>0.00559656</spacing>
+			</PolyProcessor>
+			<Draw_Lines>1</Draw_Lines>
+			<Draw_Points>1</Draw_Points>
+			<Draw_Point_nums>0</Draw_Point_nums>
+			<Draw_finalPoints>0</Draw_finalPoints>
+			<Color>1, 1, 1, 1</Color>
+			<Blank_Count>30</Blank_Count>
+			<End_Count>30</End_Count>
+			<Do_Cap_X>0</Do_Cap_X>
+			<Do_Cap_Y>0</Do_Cap_Y>
+			<useColorMap>0</useColorMap>
+			<Do_Flip_X>0</Do_Flip_X>
+			<Do_Flip_Y>0</Do_Flip_Y>
+			<Offset>0, 0</Offset>
+			<Scale>0, 0</Scale>
+		</IldaFrame_Params>
+	</LaserProjector_1>
+</group>
